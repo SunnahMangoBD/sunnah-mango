@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#173d2b">
+<title>Sunnah Mango | Freshness from the Orchard</title>
+<style>
+:root{--green:#173d2b;--green2:#28583d;--cream:#fffaf0;--gold:#e7b94f;--ink:#203126;--muted:#68756b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:var(--ink);background:var(--cream)}
+a{color:inherit;text-decoration:none}.top{background:var(--green);color:#fff;text-align:center;padding:9px 14px;font-size:13px;letter-spacing:.2px}
+header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px max(5vw,20px);background:#fffdf8;position:sticky;top:0;z-index:5;border-bottom:1px solid #eee8da}
+.brand{font-weight:850;font-size:23px;color:var(--green);letter-spacing:-.7px}.brand small{display:block;font-size:10px;letter-spacing:2.4px;color:#9b772a;font-weight:700}
+nav{display:flex;gap:24px;font-size:14px;font-weight:650}.navbtn,.btn{border:0;border-radius:999px;padding:12px 20px;background:var(--green);color:#fff;font-weight:750;cursor:pointer}.navbtn:hover,.btn:hover{background:var(--green2)}
+.hero{min-height:510px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;padding:65px max(7vw,24px);gap:35px;background:radial-gradient(circle at 78% 40%,#f4df9f 0,#f9edcf 24%,#fff8e9 55%,#f7f1e3 100%)}
+.eyebrow{color:#9a7426;font-size:12px;font-weight:850;letter-spacing:2.4px;text-transform:uppercase}.hero h1{font-size:clamp(38px,5.4vw,66px);line-height:1.08;color:var(--green);margin:16px 0}.hero p{font-size:17px;line-height:1.8;color:#58665b;max-width:510px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn.secondary{background:transparent;color:var(--green);border:1px solid #9cab9d}
+.hero-art{height:350px;border-radius:48% 52% 45% 55%;background:linear-gradient(145deg,#315f38,#153c28);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 25px 55px #25482b30;overflow:hidden}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border:1px solid #ffffff30;border-radius:50%;width:270px;height:270px}.hero-art:after{width:340px;height:340px}
+.mango{font-size:170px;filter:drop-shadow(0 18px 13px #0005);transform:rotate(-14deg);z-index:1}.leaf{position:absolute;font-size:80px;opacity:.65}.leaf.one{top:30px;left:40px;transform:rotate(-35deg)}.leaf.two{bottom:20px;right:35px;transform:rotate(30deg)}
+section{padding:68px max(6vw,22px)}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.section-head h2{font-size:34px;color:var(--green);margin:9px 0}.section-head p{color:var(--muted);line-height:1.7}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1120px;margin:auto}
+.card{background:#fff;border:1px solid #eee8da;border-radius:20px;overflow:hidden;box-shadow:0 10px 28px #263b2910}.product-photo{height:190px;display:flex;align-items:center;justify-content:center;font-size:90px;background:linear-gradient(135deg,#f9edc8,#f3d98e)}.card:nth-child(2) .product-photo{background:linear-gradient(135deg,#e5edce,#b8d19b)}.card:nth-child(3) .product-photo{background:linear-gradient(135deg,#f9e7a8,#e8c45c)}
+.cardbody{padding:20px}.card h3{margin:0 0 7px;color:var(--green);font-size:21px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.65;min-height:46px}.price{font-weight:850;font-size:20px;margin:16px 0;color:#916a1d}.price small{font-size:12px;font-weight:500;color:var(--muted)}
+.card .btn{width:100%}.features{background:#f1f4e9;display:grid;grid-template-columns:repeat(3,1fr);gap:25px;text-align:center}.feature{max-width:290px;margin:auto}.feature b{display:block;color:var(--green);font-size:17px;margin:10px}.feature p{font-size:14px;color:var(--muted);line-height:1.7}.ico{font-size:32px}
+.order{background:#fff}.orderbox{max-width:800px;margin:auto;background:#f8f5eb;padding:30px;border-radius:22px}.orderbox h2{color:var(--green);margin-top:0}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}input,select,textarea{width:100%;padding:13px;border:1px solid #d9dfd4;border-radius:10px;background:#fff;font:inherit}textarea{min-height:85px;resize:vertical}.wide{grid-column:1/-1}.hint{font-size:12px;color:var(--muted);line-height:1.6}.cartline{padding:12px 0;border-bottom:1px solid #e1dfd5;display:flex;justify-content:space-between}.total{font-size:20px;font-weight:850;color:var(--green);text-align:right;margin:18px 0}
+footer{background:var(--green);color:#f6f2e5;padding:40px max(6vw,22px);display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}footer p{color:#d3ddcf;font-size:13px;line-height:1.7}.footbrand{font-size:22px;font-weight:850}
+@media(max-width:760px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:48px}.hero-art{height:260px;max-width:430px;width:100%;margin:auto}.mango{font-size:125px}.products{grid-template-columns:1fr;max-width:420px}.features{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.wide{grid-column:auto}section{padding:52px 20px}}
+</style>
+</head>
+<body>
+<div class="top">সতেজ আম • যত্নসহকারে প্যাকেজিং • সারা বাংলাদেশে ডেলিভারি</div>
+<header>
+  <a class="brand" href="#">Sunnah Mango<small>FRESHNESS FROM THE ORCHARD</small></a>
+  <nav><a href="#home">হোম</a><a href="#products">আমের সংগ্রহ</a><a href="#why">কেন আমরা</a><a href="#order">অর্ডার</a></nav>
+  <a class="navbtn" href="#order">অর্ডার করুন</a>
+</header>
+<main>
+<section class="hero" id="home">
+ <div><div class="eyebrow">Pure • Fresh • Carefully Selected</div><h1>প্রকৃতির মিষ্টি স্বাদ,<br>আপনার দোরগোড়ায়।</h1>
+ <p>বাছাই করা সুস্বাদু আম, যত্নসহকারে প্যাকেজিং এবং নির্ভরযোগ্য ডেলিভারি—আপনার পরিবারের জন্য মৌসুমি ফলের আনন্দ।</p>
+ <div class="hero-actions"><a class="btn" href="#products">আম দেখুন</a><a class="btn secondary" href="#order">অর্ডার করতে চাই</a></div></div>
+ <div class="hero-art"><span class="leaf one">🌿</span><span class="mango">🥭</span><span class="leaf two">🍃</span></div>
+</section>
+<section id="products">
+ <div class="section-head"><div class="eyebrow">Our seasonal collection</div><h2>আমের বিশেষ সংগ্রহ</h2><p>আপনার পছন্দের জাত বেছে নিন। মৌসুম ও সরবরাহ অনুযায়ী পণ্য হালনাগাদ করা হবে।</p></div>
+ <div class="products">
+  <article class="card"><div class="product-photo">🥭</div><div class="cardbody"><h3>হিমসাগর</h3><p>সুগন্ধি, মিষ্টি ও আঁশহীন স্বাদের জনপ্রিয় আম।</p><div class="price">দাম যোগ করুন <small>/ কেজি</small></div><button class="btn" onclick="add('হিমসাগর')">অর্ডারে যোগ করুন</button></div></article>
+  <article class="card"><div class="product-photo">🥭</div><div class="cardbody"><h3>ল্যাংড়া</h3><p>নিজস্ব স্বাদ ও ঘ্রাণের জন্য পরিচিত মৌসুমি আম।</p><div class="price">দাম যোগ করুন <small>/ কেজি</small></div><button class="btn" onclick="add('ল্যাংড়া')">অর্ডারে যোগ করুন</button></div></article>
+  <article class="card"><div class="product-photo">🥭</div><div class="cardbody"><h3>আম্রপালি</h3><p>মিষ্টি স্বাদের আকর্ষণীয় রঙের জনপ্রিয় আম।</p><div class="price">দাম যোগ করুন <small>/ কেজি</small></div><button class="btn" onclick="add('আম্রপালি')">অর্ডারে যোগ করুন</button></div></article>
+ </div>
+</section>
+<section class="features" id="why">
+ <div class="feature"><div class="ico">🌱</div><b>যত্নসহকারে বাছাই</b><p>প্রতিটি অর্ডারের জন্য মানসম্মত ফল বাছাইয়ের প্রতিশ্রুতি।</p></div>
+ <div class="feature"><div class="ico">📦</div><b>নিরাপদ প্যাকেজিং</b><p>পরিবহনের উপযোগী প্যাকেজিংয়ের মাধ্যমে পাঠানোর ব্যবস্থা।</p></div>
+ <div class="feature"><div class="ico">🚚</div><b>সারা দেশে ডেলিভারি</b><p>আপনার ঠিকানায় পৌঁছে দেওয়ার জন্য কুরিয়ার ব্যবস্থা।</p></div>
+</section>
+<section class="order" id="order">
+ <div class="section-head"><div class="eyebrow">Place your order</div><h2>আপনার অর্ডার দিন</h2><p>তথ্য পূরণ করুন। অর্ডারের বিবরণ WhatsApp-এ পাঠানোর ব্যবস্থা থাকবে।</p></div>
+ <div class="orderbox"><h2>অর্ডার সারাংশ</h2><div id="cart"><p class="hint">এখনো কোনো পণ্য যোগ করা হয়নি। উপরের তালিকা থেকে আম যোগ করুন।</p></div><div class="total" id="total">মোট: মূল্য নির্ধারিত নয়</div>
+ <div class="formgrid">
+  <div><label>আপনার নাম</label><input id="name" placeholder="পূর্ণ নাম"></div>
+  <div><label>মোবাইল নম্বর</label><input id="phone" placeholder="01XXXXXXXXX"></div>
+  <div class="wide"><label>সম্পূর্ণ ডেলিভারি ঠিকানা</label><textarea id="address" placeholder="বাড়ি/রোড, এলাকা, উপজেলা, জেলা"></textarea></div>
+  <div><label>পেমেন্ট পদ্ধতি</label><select id="payment"><option>ক্যাশ অন ডেলিভারি</option><option>bKash — 01610077254 (পেমেন্ট করে ট্রানজেকশন আইডি নোটে লিখুন)</option><option>Nagad — 01610077254 (পেমেন্ট করে ট্রানজেকশন আইডি নোটে লিখুন)</option><option>অনলাইন পেমেন্ট গেটওয়ে (সেটআপ বাকি)</option></select></div>
+  <div><label>ডেলিভারি নোট (ঐচ্ছিক)</label><input id="note" placeholder="বিশেষ নির্দেশনা"></div>
+  <div class="wide"><button class="btn" style="width:100%" onclick="sendOrder()">WhatsApp-এ অর্ডার পাঠান</button><p class="hint">নোট: অনলাইন পেমেন্ট গ্রহণ করতে bKash/Nagad মার্চেন্ট বা পেমেন্ট গেটওয়ের অনুমোদিত অ্যাকাউন্ট ও API সংযোগ লাগবে। এই প্রিভিউতে কোনো টাকা কাটা হবে না।</p></div>
+ </div></div>
+</section>
+</main>
+<footer><div><div class="footbrand">Sunnah Mango</div><p>Freshness from the Orchard<br>বিশুদ্ধতা, সততা ও যত্ন—প্রতিটি অর্ডারে।</p></div><div><b>যোগাযোগ</b><p>ফোন / WhatsApp: 01610077254<br>bKash / Nagad: 01610077254<br>Facebook: <a href="https://www.facebook.com/SunnahMangoBD" target="_blank" rel="noopener">Sunnah Mango BD</a></p></div><div><b>সাহায্য</b><p>ডেলিভারি তথ্য<br>পেমেন্ট নীতিমালা<br>রিটার্ন ও রিফান্ড নীতিমালা</p></div></footer>
+<script>
+const cart={};
+function add(item){cart[item]=(cart[item]||0)+1;render();document.getElementById('order').scrollIntoView({behavior:'smooth'});}
+function render(){const el=document.getElementById('cart');const keys=Object.keys(cart);if(!keys.length){el.innerHTML='<p class="hint">এখনো কোনো পণ্য যোগ করা হয়নি।</p>';return;}el.innerHTML=keys.map(k=>`<div class="cartline"><span>${k}</span><span><button onclick="changeQty('${k}',-1)">−</button> ${cart[k]} কেজি <button onclick="changeQty('${k}',1)">+</button></span></div>`).join('');document.getElementById('total').textContent='মোট: দাম ও ওজন নিশ্চিত করার পর জানানো হবে';}
+function changeQty(k,n){cart[k]+=n;if(cart[k]<=0)delete cart[k];render();}
+function sendOrder(){const name=document.getElementById('name').value.trim(),phone=document.getElementById('phone').value.trim(),address=document.getElementById('address').value.trim();if(!Object.keys(cart).length){alert('আগে অন্তত একটি পণ্য যোগ করুন।');return;}if(!name||!phone||!address){alert('নাম, মোবাইল নম্বর ও ঠিকানা পূরণ করুন।');return;}const items=Object.entries(cart).map(([k,v])=>`${k}: ${v} কেজি`).join('%0A');const msg=`Sunnah Mango অর্ডার%0Aনাম: ${encodeURIComponent(name)}%0Aফোন: ${encodeURIComponent(phone)}%0Aঠিকানা: ${encodeURIComponent(address)}%0Aপণ্য:%0A${items}%0Aপেমেন্ট: ${encodeURIComponent(document.getElementById('payment').value)}%0Aনোট: ${encodeURIComponent(document.getElementById('note').value)}`;const whatsapp='8801610077254';if(whatsapp.includes('X')){alert('ওয়েবসাইট চালুর আগে কোডে আপনার WhatsApp নম্বর বসাতে হবে।');return;}window.open(`https://wa.me/${whatsapp}?text=${msg}`,'_blank');}
+</script>
+</body></html>
